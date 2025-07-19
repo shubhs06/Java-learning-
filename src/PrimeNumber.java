@@ -3,14 +3,14 @@ import java.util.Scanner;
 public class PrimeNumber {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the number");
+        System.out.print("Enter the number : ");
         int num = sc.nextInt();
         boolean result = PrimeNoLogic(num);
         if (result) {
-            System.out.println("Number is prime ");
+            System.out.println("Given Number is "+ num + " Prime ");
             
         }else{
-            System.out.println("Number is not prime");
+            System.out.println("Given Number is "+ num + " not Prime");
         }
         
     }
