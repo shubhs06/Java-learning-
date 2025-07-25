@@ -1,6 +1,6 @@
 public class Course {
     
-    static int maxCapacity = 100;
+    static int maxCapacity =100 ;
     String courseName ;
     int enrolledment ;
 
@@ -14,8 +14,9 @@ public class Course {
     }
     
 
-    static void setMaxCapacity(int capacity) {
-        Course.maxCapacity = capacity;
+    static void setMaxCapacity(int maxCapacity) {
+        Course.maxCapacity = maxCapacity;
+        System.out.println("We have only limited seats " + maxCapacity);
         
     }
     void enrolledStudent(String studentName){
@@ -37,10 +38,11 @@ public class Course {
         
     }
     void showEnrolledStudent(){
-        System.err.println("Enrolled Students Are : " + this.enrolledment);
+        System.err.println("Enrolled Students Are : " + this.enrolledment );
     }
     public static void main(String[] args) {
         Course myCourse = new Course("JavaLerarning");
+        setMaxCapacity(60);
         myCourse.enrolledStudent("shubham");
         myCourse.enrolledStudent("Anand");
         myCourse.enrolledStudent("Jo");
