@@ -24,5 +24,6 @@ public class Palindrome {
         }
         
         return pali == copynum;
+ 
     }
 }
