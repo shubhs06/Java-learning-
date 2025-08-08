@@ -1,4 +1,4 @@
-package ThredingConcepte;
+package MultiThredingconcepts.ThredingConcepte;
 
 public class PrintingTreads extends Thread {
 
@@ -7,20 +7,18 @@ public class PrintingTreads extends Thread {
         // TODO Auto-generated method stub
 
         for (int i = 1; i <= 10; i++) {
-            
+
             System.out.printf("%d Hello from Therad %d  %s \n",i,noThread ,Thread.currentThread());
-            
+
         }
         System.out.println(getState());
     }
 
-    
-        private final int noThread;
-    
-        public PrintingTreads(int noThread) {
-            this.noThread = noThread;        
-    }    
 
-    
+        private final int noThread;
+
+        public PrintingTreads(int noThread) {
+            this.noThread = noThread;
+    }
 
 }

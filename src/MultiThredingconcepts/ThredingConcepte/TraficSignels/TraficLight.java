@@ -1,4 +1,4 @@
-package ThredingConcepte.TraficSignels;
+package MultiThredingconcepts.ThredingConcepte.TraficSignels;
 
 public class TraficLight extends Thread {
 

@@ -1,4 +1,4 @@
-package ThredingConcepte;
+package MultiThredingconcepts.ThredingConcepte;
 
 public class Statechecking extends Thread {
 

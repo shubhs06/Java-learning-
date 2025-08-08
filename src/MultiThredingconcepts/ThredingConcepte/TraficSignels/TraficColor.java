@@ -1,8 +1,8 @@
-package ThredingConcepte.TraficSignels;
+package MultiThredingconcepts.ThredingConcepte.TraficSignels;
 
 public enum TraficColor {
 
-    RED(3000) , YELLOW(500) , GREEN(5000);
+    RED(9000) , YELLOW(2000) , GREEN(5000);
 
     private final int onLightTime;
 
