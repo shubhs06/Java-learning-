@@ -14,7 +14,7 @@ public class SortStudents {
         students.sort((s1, s2) -> Integer.compare(s1.marks, s2.marks));
 
         // Print sorted list
-        
+
         System.out.println("Sorted by marks (ascending):");
         students.forEach(System.out::println);
         System.out.println();
