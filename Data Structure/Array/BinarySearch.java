@@ -4,17 +4,20 @@ import java.util.Scanner;
 
 public class BinarySearch {
     public static int binarySearchAlgo(int[] number,int num){
-        int s = 0;
-        int e = number.length -1;
-        while (s <= e ) {
-            int mid = (s+e) /2 ;
+        int start = 0;                      //starting index
+        int end = number.length -1;         //end index of array
+        while (start <= end ) {
+            int mid = (start + end) / 2 ; // getting middle of array
+            //comparing
             if (number[mid] == num) {
                 return mid;
             }
+            //shifting left
             if (number[mid] < num) {
-                s = mid + 1;
+                start = mid + 1;
+            //shifting right
             } else {
-                e = mid -1;
+                end = mid -1;
             }
         }
         return -1;
@@ -35,5 +38,7 @@ public class BinarySearch {
         int num = in.nextInt();
         int index =binarySearchAlgo(numbers, num);
         System.out.println(index);
+
+        in.close();
     }
 }

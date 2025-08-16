@@ -4,7 +4,6 @@ public class TwoSum {
 
     public static void main(String[] args) {
 
-        two
 
     }
 class Solution {
