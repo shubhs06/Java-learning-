@@ -2,18 +2,20 @@ package Array;
 
 import java.util.Scanner;
 
-public class SubArray {
-
+public class PrefixMaxSum {
     public static void printSubArray(int [] numbers){
         int max = Integer.MIN_VALUE;                    // for max take integers smallest value
         int sum =0;                                     // sum variable declare
+        int[] prefix = new int[numbers.length];
+        prefix[0] = numbers[0];
+        for (int i = 1 ; i < prefix.length; i++) {
+            prefix [i] = prefix[i-1] + numbers[i];
+        }
+
+
         for (int i = 0; i < numbers.length; i++) {      //Starting Loop for array first number
             for (int j = i; j < numbers.length; j++) {  // second loop for sub array end end number
-                sum = 0;                            //again sum make zero for getting next sub array sum
-                for (int k = i; k <= j; k++) {          //print sub array
-                    System.out.print(numbers[k] +" ");  //printing statement
-                    sum += numbers[k];                  //sub array sum of elements
-                    }
+                sum = i == 0 ? prefix[j] : prefix[j] - prefix[i-1];                 //
                     System.out.print("= " +sum);         //print sub array sum
                     if (max < sum) {
                         max = sum;                          //max update
@@ -23,6 +25,7 @@ public class SubArray {
             System.out.println();
         }
         System.out.println("Max sum is :"+ max);            // max print
+
     }
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
